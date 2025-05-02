@@ -10,7 +10,7 @@
     {
       "nome": "Carla",
       "telefone": "123123123",
-      "idade": 19,
+      "idade": "19",
       "turma": "A",
       "id": "2"
     }

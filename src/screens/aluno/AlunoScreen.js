@@ -111,11 +111,11 @@ function AlunoScreen() {
         />
       </View>
       <CustomButton
-          title="Criar"
-          onPress={() => {
-            handleCreateClick();
-          }}
-        ></CustomButton>
+        title="Criar"
+        onPress={() => {
+          handleCreateClick();
+        }}
+      ></CustomButton>
     </View>
   );
 }
