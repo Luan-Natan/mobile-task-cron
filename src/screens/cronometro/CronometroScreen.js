@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import CronometroSimplesScreen from "../cronometroSimples/CronometroSimplesScreen";
-import CronometroPomodoroScreen from "../cronometroPomodoro/CronometroPomodoroScreen";
+import CronometroSimplesScreen from "./cronometroSimples/CronometroSimplesScreen";
+import CronometroPomodoroScreen from "./cronometroPomodoro/CronometroPomodoroScreen";
 
 const Tab = createBottomTabNavigator();
 

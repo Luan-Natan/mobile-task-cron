@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import CustomButton from "../../components/customButtom/CustomButtom";
-import CronometroPomodoroUtil from "../../utils/CronometroPomodoroUtil";
+import CustomButton from "../../../components/customButtom/CustomButtom";
+import CronometroSimplesUtil from "../../../utils/CronometroSimplesUtil";
 
-function CronometroPomodoroScreen() {
-  const [getMinuto, setMinuto] = useState(20);
-  const [getSegundo, setSegundo] = useState(0);
+function CronometroSimplesScreen() {
   const [getMilissegundo, setMilissegundo] = useState(0);
+  const [getSegundo, setSegundo] = useState(0);
+  const [getMinuto, setMinuto] = useState(0);
 
   const cronProps = {
     getMilissegundo: getMilissegundo,
@@ -23,32 +23,28 @@ function CronometroPomodoroScreen() {
       <StatusBar style="auto" />
 
       <Text style={styles.cronometro}>
-        {CronometroPomodoroUtil.FormatarTempo(
-          getMinuto,
-          getSegundo,
-          getMilissegundo
-        )}
+        {CronometroSimplesUtil.FormatarTempo(getMinuto, getSegundo, getMilissegundo)}
       </Text>
 
       <View style={styles.containerBotao}>
         <CustomButton
           title="Começar"
           onPress={() => {
-            CronometroPomodoroUtil.Comecar(cronProps);
+            CronometroSimplesUtil.Comecar(cronProps);
           }}
         />
 
         <CustomButton
           title="Pausar"
           onPress={() => {
-            CronometroPomodoroUtil.Pausar();
+            CronometroSimplesUtil.Pausar();
           }}
         />
 
         <CustomButton
           title="Reiniciar"
           onPress={() => {
-            CronometroPomodoroUtil.Reiniciar(cronProps);
+            CronometroSimplesUtil.Reiniciar(cronProps);
           }}
         />
       </View>
@@ -88,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CronometroPomodoroScreen;
+export default CronometroSimplesScreen;

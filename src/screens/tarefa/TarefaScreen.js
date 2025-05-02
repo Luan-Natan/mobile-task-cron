@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import CadastrarScreen from "../cadastrar/CadastrarScreen";
-import ListarScreen from "../listar/ListarScreen";
+import CadastrarScreen from "./cadastrar/CadastrarScreen";
+import ListarScreen from "./listar/ListarScreen";
 
 const Tab = createBottomTabNavigator();
 

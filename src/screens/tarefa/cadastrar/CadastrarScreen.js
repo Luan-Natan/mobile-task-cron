@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import TextInputBox from "../../components/textInputBox/TextInputBox";
-import CustomButton from "../../components/customButtom/CustomButtom";
-import TarefaUtil from "../../utils/TarefaUtil";
+import TextInputBox from "../../../components/textInputBox/TextInputBox";
+import CustomButton from "../../../components/customButtom/CustomButtom";
+import TarefaUtil from "../../../utils/TarefaUtil";
 
 function CadastrarScreen({ getData, setData }) {
   const [getTask, setTask] = useState("");

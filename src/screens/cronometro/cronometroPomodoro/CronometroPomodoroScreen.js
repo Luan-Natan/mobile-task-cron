@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import CustomButton from "../../components/customButtom/CustomButtom";
-import CronometroSimplesUtil from "../../utils/CronometroSimplesUtil";
+import CustomButton from "../../../components/customButtom/CustomButtom";
+import CronometroPomodoroUtil from "../../../utils/CronometroPomodoroUtil";
 
-function CronometroSimplesScreen() {
-  const [getMilissegundo, setMilissegundo] = useState(0);
+function CronometroPomodoroScreen() {
+  const [getMinuto, setMinuto] = useState(20);
   const [getSegundo, setSegundo] = useState(0);
-  const [getMinuto, setMinuto] = useState(0);
+  const [getMilissegundo, setMilissegundo] = useState(0);
 
   const cronProps = {
     getMilissegundo: getMilissegundo,
@@ -23,28 +23,32 @@ function CronometroSimplesScreen() {
       <StatusBar style="auto" />
 
       <Text style={styles.cronometro}>
-        {CronometroSimplesUtil.FormatarTempo(getMinuto, getSegundo, getMilissegundo)}
+        {CronometroPomodoroUtil.FormatarTempo(
+          getMinuto,
+          getSegundo,
+          getMilissegundo
+        )}
       </Text>
 
       <View style={styles.containerBotao}>
         <CustomButton
           title="Começar"
           onPress={() => {
-            CronometroSimplesUtil.Comecar(cronProps);
+            CronometroPomodoroUtil.Comecar(cronProps);
           }}
         />
 
         <CustomButton
           title="Pausar"
           onPress={() => {
-            CronometroSimplesUtil.Pausar();
+            CronometroPomodoroUtil.Pausar();
           }}
         />
 
         <CustomButton
           title="Reiniciar"
           onPress={() => {
-            CronometroSimplesUtil.Reiniciar(cronProps);
+            CronometroPomodoroUtil.Reiniciar(cronProps);
           }}
         />
       </View>
@@ -84,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CronometroSimplesScreen;
+export default CronometroPomodoroScreen;

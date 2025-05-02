@@ -1,5 +1,5 @@
 import { View, StyleSheet, FlatList } from "react-native";
-import CustomCard from "../../components/customCard/CustomCard";
+import CustomCard from "../../../components/customCard/CustomCard";
 
 function ListarScreen({ getData }) {
   return (
