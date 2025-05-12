@@ -5,6 +5,7 @@ import TarefaScreen from "./src/screens/tarefa/TarefaScreen";
 import CronometroScreen from "./src/screens/cronometro/CronometroScreen";
 import GatoScreen from "./src/screens/gato/GatoScreen";
 import AlunoScreen from "./src/screens/aluno/AlunoScreen";
+import TurmaScreen from "./src/screens/turma/TurmaScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Drawer.Screen name="Cronômetros" component={CronometroScreen} /> 
         <Drawer.Screen name="Gatos" component={GatoScreen} /> 
         <Drawer.Screen name="Alunos" component={AlunoScreen} /> 
+        <Drawer.Screen name="Turmas" component={TurmaScreen} /> 
       </Drawer.Navigator>
     </NavigationContainer>
   );

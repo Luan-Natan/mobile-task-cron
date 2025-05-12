@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "http://192.168.8.1:3000"; //"http://localhost:3001";
 
 class AlunoApi {
   static async getAlunos(setResult) {
